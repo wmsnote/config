@@ -9,11 +9,17 @@ export ZSH="/home/user/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="ys"
-JAVA_HOME="/home/user/Downloads/Applications/jdk1.8.0_231"
+
+JAVA_8_HOME="/home/user/Downloads/Applications/jdk1.8.0_231"
+JAVA_11_HOME="/home/user/Downloads/Applications/jdk-11.0.6"
+export JAVA_HOME=$JAVA_11_HOME
+alias java11="export JAVA_HOME=$JAVA_11_HOME"
+alias java8="export JAVA_HOME=$JAVA_8_HOME"
+
 MVN_HOME="/home/user/Downloads/Applications/apache-maven-3.6.2"
 NODE_HOME="/home/user/Downloads/Applications/node-v12.14.0-linux-x64"
 PATH=$PATH:$JAVA_HOME/bin:$MVN_HOME/bin:$NODE_HOME/bin
-export JAVA_HOME PATH MVN_HOME NODE_HOME
+export PATH MVN_HOME NODE_HOME
 
 
 
