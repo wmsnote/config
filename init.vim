@@ -20,6 +20,7 @@ imap <c-v> <c-r>+
 autocmd filetype python setlocal makeprg=pylint3\ --reports=n\ --msg-template=\"{path}:{line}:\ {msg_id}\ {symbol},\ {obj}\ {msg}\"\ %:p
 autocmd filetype python setlocal errorformat=%f:%l:\ %m
 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
 " Install vim-plug if it's not already installed (Unix-only).
@@ -102,6 +103,8 @@ let g:lightline = {'colorscheme': 'gruvbox'} " onedark theme
 let g:airline_theme='gruvbox' " onedark theme
 let g:NERDSpaceDelims = 1
 let NERDTreeShowHidden=1
+let NERDTreeShowBookmarks=1 "显示书签
+let NERDTreeMinimalUI=1 "不显示帮助面板
 let NERDTreeIgnore = ['\.git$', '\.DS_Store']
 let g:NERDTreeQuitOnOpen = 1
 let g:quickmenu_options = "LH"
