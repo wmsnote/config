@@ -134,25 +134,6 @@ let g:ycm_complete_in_comments = 1
 
 
 
-" make YCM compatible with UltiSnips (using supertab)
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-" let g:SuperTabDefaultCompletionType = '<C-n>'
-" better key bindings for UltiSnipsExpandTrigger
-" let g:UltiSnipsExpandTrigger="<cr>"
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-
-" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
-" (via http://stackoverflow.com/a/22253548/1626737)
-" let g:SuperTabDefaultCompletionType    = '<C-n>'
-" let g:SuperTabCrMapping                = 0
-" let g:UltiSnipsExpandTrigger           = '<tab>'
-" let g:UltiSnipsJumpForwardTrigger      = '<tab>'
-" let g:UltiSnipsJumpBackwardTrigger     = '<s-tab>'
-" let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-j>', '<C-n>', '<Down>']
@@ -197,10 +178,17 @@ let g:syntastic_python_checkers = ['pylint']
 let g:coc_global_extensions = ['coc-python', 'coc-vimlsp', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore', 'coc-vimlsp', 'coc-tailwindcss', 'coc-stylelint', 'coc-tslint', 'coc-lists', 'coc-git', 'coc-explorer', 'coc-pyright', 'coc-sourcekit', 'coc-translator', 'coc-flutter']
 
 
+Plug 'mattesgroeger/vim-bookmarks'
 
+" Add/remove bookmark at current line	mm	:BookmarkToggle
+" Add/edit/remove annotation at current line	mi	:BookmarkAnnotate <TEXT>
+" Jump to next bookmark in buffer	mn	:BookmarkNext
+" Jump to previous bookmark in buffer	mp	:BookmarkPrev
+" Show all bookmarks (toggle)	ma	:BookmarkShowAll
+" Clear bookmarks in current buffer only	mc	:BookmarkClear
+" Clear bookmarks in all buffers	mx	:BookmarkClearAll
 
-
-
+Plug 'jistr/vim-nerdtree-tabs'
 
 call plug#end()
 
@@ -283,9 +271,6 @@ set hlsearch                    " Highlight search results.
 set incsearch                   " Search as you type.
 set clipboard=unnamed,unnamedplus  " Copy into system (*, +) registers.
 set tags=tags;  " Look for a tags file recursively in parent directories.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 set background=dark
 set smartindent                                      "开启新行时使用智能自动缩进
