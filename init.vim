@@ -97,6 +97,16 @@ Plug 'tweekmonster/braceless.vim'
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 
+Plug 'posva/vim-vue'
+
+
+
+
+
+
+
+
+
 let g:deoplete#enable_at_startup = 1
 let g:auto_save = 1    " 自动保存·插件：vim-auto-save
 let g:lightline = {'colorscheme': 'gruvbox'} " onedark theme
