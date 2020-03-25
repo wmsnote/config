@@ -28,6 +28,7 @@ export PATH MVN_HOME NODE_HOME GRADLE_HOME
 alias home="cd ~ && fortune|cowsay"
 alias vi="vim"
 alias ll='ls -al'
+alias ipi="hostname -I | awk '{pring $1}'"
 # git log --all --no-merge |       --author='wumingsheng'  |  --graph --stat
 alias gitlog="git log --color --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
