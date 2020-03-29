@@ -47,6 +47,7 @@ zsh-syntax-highlighting
 docker
 pip
 vagrant
+virtualenv
 ansible)
 
 
@@ -62,6 +63,8 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "romkatv/powerlevel10k", as:theme
+# zplug "plugins/virtualenv", from:oh-my-zsh
+# zplug "plugins/virtualenvwrapper", from:oh-my-zsh, if:"(( $+commands[mkvirtualenv] ))"
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
